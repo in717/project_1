@@ -1,0 +1,108 @@
+Aggregate function
+
+Assignment 1: select count(*)
+              from employees;
+-----------------------------------------------------------------
+Assignment 2: select count(*)
+              from jobs;
+-----------------------------------------------------------
+Assignment 3: select sum(salary)
+              from employees;
+-------------------------------
+Assignment 4: select max(salary),min(salary),avg(salary),sum(salary)
+              from employees;
+-------------------------------------------------
+Assignment 5: select max(salary)
+              from employees
+              where employee_id like 'salesman'; 
+---------------------------------------------------------
+Assignment 6: select avg(salary)
+              from employees
+              where department_id = 20;
+--------------------------------------------------------
+Assignment 7: select min(hire_date),max(hire_date)
+              from employees;
+--------------------------------------------------
+Assignment 8: select sum(salary),sum(commission_pct)
+              from employees
+              where department_id = 30;
+------------------------------------------------------
+ Assignment 9: select avg(salary),min(salary),max(salary)
+               from employees
+               where job_id = 'clerk'  
+               or job_id = 'manager';
+ --------------------------------------------------------
+ Assignment 10: select location_id,city,state_province,country_id
+                from locations
+                order by location_id;
+------------------------------------------------------------------
+Assignment 11:select department_id,max(hire_date) as last_hire_date
+              from employees
+              group by department_id;
+------------------------------------------------------------------------
+ Assignment 12: select max(salary)
+                from employees
+                where department_id = 20;
+------------------------------------------------
+Assignment 13: select e.first_name,e.last_name
+               from employees e join employees mgr
+               on e.manager_id = mgr.employee_id
+               where mgr.last_name = 'BLAKE';
+---------------------------------------------------------------
+Assignment 14: select count(*) as num_employees 
+               from employees e 
+               join departments d on e.department_id = d.department_id
+               join locations l
+               on d.location_id = l.location_id
+               where l.city = 'NEW YORK';
+-------------------------------------------------------------------------
+Assignment 15: select avg(salary)
+               from employees
+               where department_id = 30;
+-----------------------------------------------------------------------------
+Assignment 16: select distinct length(first_name)as name_length
+               from employees;
+-------------------------------------------------------------------------------
+Assignment 17: select department_id,sum(salary)
+               from employees
+               group by department_id;
+---------------------------------------------------------------------------------
+Assignment 18: select department_id,count(*) as num_employees
+               from employees
+               group by department_id;
+---------------------------------------------------------------------------------
+Assignment 19: select job_id,sum(salary)
+               from employees
+               group by job_id;
+-----------------------------------------------------------------------------
+Assignment 20: select job_id, count(*)employee_id
+               from employees
+               group by job_id
+               order by employee_id DESC;
+----------------------------------------------------------------------------
+Assignment 21:select job_id,sum(salary),avg(salary),min(salary)
+              from employees
+              group by job_id;
+--------------------------------------------------------------------------
+Assignment 22: select sum(salary),job_id
+               from employees
+               where department_id = 20
+               group by job_id;
+-------------------------------------------------------------
+Assignment 23: select department_id,sum(salary)
+               from employees
+               group by department_id;
+--------------------------------------------------------------------
+Assignment 24: select department_id, max(salary)
+               from employees
+               where salary < 3000
+               group by department_id;
+-----------------------------------------------------------------------
+Assignment 25:select job_id,sum(salary),avg(salary)
+              from employees
+              where department_id = 20 and salary > 1000
+              group by job_id;
+               
+
+
+
